@@ -1,0 +1,111 @@
+/**BEM EJ: class="cliente__nombre--ceo"**/
+:root {
+    --primary: #9c27b0;
+    --blackPrimary: #89119D;
+    --secundary: #FFCE00;
+    --blackSecundary: rgb(233,287,2);
+    --white: #FFF;
+    --black: #000;
+
+    --mainFont: 'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *::after {
+    box-sizing: inherit;
+}
+
+/**Globals**/
+
+body {
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundary);
+    font-family: var(--mainFont);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/**Header**/
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+/**Footer**/
+
+.footer {
+    background-color: var(--primaryBlack);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__text {
+    font-family: var(--mainFont);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/**Nav**/
+
+.nav {
+    background-color: var(--primaryBlack);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav__link {
+    font-family: var(--mainFont);
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.nav__link--active,
+.nav__link:hover {
+    color: var(--secundary)
+}
