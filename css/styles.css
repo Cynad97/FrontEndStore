@@ -96,16 +96,120 @@ h3 {
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    /* gap: 2rem; separacion nueva forma */
 }
 
 .nav__link {
     font-family: var(--mainFont);
     color: var(--white);
     font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.nav__link:last-of-type {
+    margin-right: 0;
 }
 
 .nav__link--active,
 .nav__link:hover {
     color: var(--secundary)
 }
+
+/**Grid**/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px){
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/**Products**/
+
+.product {
+    background-color: var(--blackPrimary);
+    padding: 1rem;
+}
+
+.product__image {
+    width: 100%;
+}
+
+.product__name {
+    font-size: 4rem;
+}
+
+.product__price {
+    font-size: 2.8rem;
+    color: var(--secundary);
+}
+
+.product__name,
+.product__price {
+    font-family: var(--mainFont);
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/**Graficos**/
+
+.grap {
+    min-height: 38rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+
+.grap--shirts {
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grap--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px){
+    
+    .grap--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/**Abous Us**/
+
+.about {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.about__image {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .about {
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+    }
+
+    .about__image {
+        grid-column: 2 / 3;
+    }
+}
+
+
+
+
+
+
+
